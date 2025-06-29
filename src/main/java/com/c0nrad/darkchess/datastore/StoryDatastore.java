@@ -12,6 +12,9 @@ import org.bson.types.ObjectId;
 import xyz.morphia.Datastore;
 
 public class StoryDatastore {
+
+    private static final String ROW_PAWNS_WHITE = "PPPPPPPP";
+    
     public static Story Find(String storyId) {
         Datastore d = MorphiaSingleton.GetDatastore();
         ObjectId objectId = new ObjectId(storyId);
@@ -42,12 +45,12 @@ public class StoryDatastore {
 
         String[] layout ={
             "    K   ", 
-            "PPPPPPPP",
+            "ROW_PAWNS_WHITE",
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            "ROW_PAWNS_WHITE",
             "    k   "}; 
 
         Board b = new Board(layout);
@@ -91,12 +94,12 @@ public class StoryDatastore {
 
         String[] layout3 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            "ROW_PAWNS_WHITE",
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            "ROW_PAWNS_WHITE",
             "rnb kbnr"}; 
 
         Board b3 = new Board(layout3);
@@ -114,9 +117,9 @@ public class StoryDatastore {
         "Kill the peasants and their leader before they get to us!?\n";
 
         String[] layout4 ={
-            "PPPPKPPP", 
-            "PPPPPPPP",
-            "PPPPPPPP",
+            "ROW_PAWNS_WHITE", 
+            "ROW_PAWNS_WHITE",
+            "ROW_PAWNS_WHITE",
             "        ",
             "        ",
             "        ",
@@ -137,12 +140,12 @@ public class StoryDatastore {
 
         String[] layout5 ={
             "RNBQKBNR", 
-            "PPPPPPPP",
+            "ROW_PAWNS_WHITE",
             "        ",
             "        ",
             "        ",
             "        ",
-            "pppppppp",
+            "ROW_PAWNS_WHITE",
             "rnbqkbnr"}; 
 
         Board b5 = new Board(layout5);
